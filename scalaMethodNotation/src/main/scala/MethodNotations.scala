@@ -1,7 +1,7 @@
 object MethodNotations extends App {
 
   def miguel = new Person("Miguel", "The Godfather")
-  println(miguel.likes("The Godfather"))
+  println(miguel likes "The Godfather") //infix notation - operator notation
 }
 
 class Person(val name: String, favoriteMovie: String) {
