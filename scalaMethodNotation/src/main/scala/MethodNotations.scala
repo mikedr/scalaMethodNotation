@@ -22,6 +22,8 @@ object MethodNotations extends App {
 
   println(nuevaPersona.learns("Kung fu"))
   println(nuevaPersona learns)
+
+  println(miguel.apply(1000))
 }
 
 class Person(val name: String, favoriteMovie: String, val age: Int = 0) {
@@ -38,4 +40,6 @@ class Person(val name: String, favoriteMovie: String, val age: Int = 0) {
 
   def learns(skill: String): String = s"$name learns $skill"
   def learns(): String = this.learns("scala")
+
+  def apply(times: Int): String = s"$name watched $favoriteMovie $times times"
 }
