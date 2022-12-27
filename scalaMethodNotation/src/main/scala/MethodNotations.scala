@@ -19,6 +19,9 @@ object MethodNotations extends App {
 
   def nuevaPersona = new Person("Bruce", "Batman",50)
   println(+nuevaPersona)
+
+  println(nuevaPersona.learns("Kung fu"))
+  println(nuevaPersona learns)
 }
 
 class Person(val name: String, favoriteMovie: String, val age: Int = 0) {
@@ -32,4 +35,7 @@ class Person(val name: String, favoriteMovie: String, val age: Int = 0) {
 
   override def toString = s"$name ($age años)"
   def unary_+(): Person = new Person(name, favoriteMovie, age+1)
+
+  def learns(skill: String): String = s"$name learns $skill"
+  def learns(): String = this.learns("scala")
 }
